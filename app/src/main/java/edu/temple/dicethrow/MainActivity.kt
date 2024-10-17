@@ -19,10 +19,9 @@ class MainActivity : AppCompatActivity() {
                 .beginTransaction()
                 .add(R.id.dieContainer, DieFragment.newInstance(10))
                 .commit()
-
-            findViewById<Button>(R.id.rollDiceButton).setOnClickListener {
-                (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
-            }
+        }
+        findViewById<Button>(R.id.rollDiceButton).setOnClickListener {
+            (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
         }
     }
 
