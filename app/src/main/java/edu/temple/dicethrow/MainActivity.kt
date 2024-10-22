@@ -9,7 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import kotlin.random.Random
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity(), ButtonFragment.ButtonInterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun buttonClicked() {
+    override fun buttonClicked() {
         return (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
     }
 }
