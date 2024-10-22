@@ -20,11 +20,9 @@ class MainActivity : AppCompatActivity() {
                 .add(R.id.dieContainer, DieFragment.newInstance(10))
                 .commit()
         }
-
-        // (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
-
     }
+
     fun buttonClicked() {
         return (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
     }
-    }
+}
